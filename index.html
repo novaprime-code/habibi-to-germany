@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
-    <title>💕 A Special Question For Khushi 💕</title>
+    <title>✈️ A Special Question For Khushi 💕</title>
     <style>
         * {
             margin: 0;
@@ -441,6 +441,31 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
             font-weight: bold;
         }
 
+        /* Germany Reasons Grid */
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(8px, 1.5vw, 14px);
+            margin-bottom: clamp(12px, 2vh, 22px);
+            text-align: left;
+        }
+        .reason-item {
+            background: rgba(168,85,247,0.1);
+            border: 1px solid rgba(255,105,180,0.2);
+            border-radius: 12px;
+            padding: clamp(8px, 1.5vw, 14px) clamp(10px, 2vw, 16px);
+            font-size: clamp(0.72rem, 1.8vw, 0.88rem);
+            color: #c8c8e0;
+            line-height: 1.5;
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+        .reason-item strong { color: #ff69b4; font-weight: bold; }
+        @media (max-width: 420px) {
+            .reasons-grid { grid-template-columns: 1fr; }
+        }
+
         /* Hover Message */
         .hover-message {
             position: fixed;
@@ -575,22 +600,29 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
 
             <!-- Main Card (on teddy's torso) -->
             <div class="card" id="mainCard">
-                <div class="big-heart">💖</div>
+                <div class="big-heart">🇳🇵✈️🇩🇪</div>
                 
                 <h1 class="title">Hey <span class="name-highlight">Khushi</span>! ✨</h1>
-                <p class="subtitle">I have something very special to ask you...</p>
+                <p class="subtitle">There's something I've been wanting to ask you...</p>
+
+                <div class="reasons-grid">
+                    <div class="reason-item">🎓 <span>World-class universities — many <strong>tuition-free</strong> even for international students</span></div>
+                    <div class="reason-item">📚 <span>DAAD scholarships cover living costs — <strong>your dream program is fundable</strong></span></div>
+                    <div class="reason-item">🌍 <span>A European degree opens doors <strong>across the entire continent</strong></span></div>
+                    <div class="reason-item">💙 <span>Dresden has cobblestone streets, river sunsets &amp; <strong>someone who'd love to show you around</strong></span></div>
+                </div>
                 
                 <h2 class="question">
-                    <span class="name-in-question">Khushi</span>, Will You Be My Valentine? 💕
+                    <span class="name-in-question">Khushi</span>, will you come study in Germany? 🌸
                 </h2>
                 
                 <div class="buttons-container" id="buttonsContainer">
-                    <button class="btn btn-yes" id="yesBtn" onclick="sayYes()">Yes! 💖</button>
+                    <button class="btn btn-yes" id="yesBtn" onclick="sayYes()">Yes! ✈️💖</button>
                     <button class="btn btn-no" id="noBtn" onmouseover="runAway()" onclick="runAway()">No</button>
                 </div>
 
                 <div class="love-note">
-                    <p>Every love story is beautiful, but <span>ours is my favorite</span> 💕</p>
+                    <p>The best adventures are the ones we <span>didn't plan alone</span> 💕</p>
                 </div>
             </div>
 
@@ -648,21 +680,21 @@ filter: drop-shadow(0 0 15px rgba(255,215,0,0.8));
         let messageTimeout = null;
 
         const funnyMessages = [
-            "Haha! Nice try, Khushi! 😜💕",
-            "Nope! That button is scared of you! 😏",
-            "The No button says: 'I don't think so!' 💖",
+            "Haha! Nice try, Khushi! 😜✈️",
+            "Germany is literally free to study! 🎓",
+            "DAAD scholarships exist for a reason! 📚",
+            "The No button is too scared of Germany! 😏",
             "Aww, just say Yes already! 😘",
-            "That button is playing hard to get! 🙈",
-            "You can't catch it, Khushi! 😄",
-            "It's running away from you! 💕",
+            "Dresden is beautiful in spring btw! 🌸",
+            "That button is running back to Kathmandu! 💕",
             "The No button has left the chat! 😝",
-            "Wrong button! ➡️ Yes is waiting!",
+            "Wrong button! ➡️ Germany is waiting!",
             "Khushi, resistance is futile! 💘",
-            "That button is too shy! 🙊",
+            "Even the teddy wants you to come! 🧸",
             "Keep trying... or just click Yes! 😉",
-            "🧸 The teddy wants you to say Yes!",
-            "The teddy is judging you! 🧸😂",
-            "Make the teddy happy, Khushi! 🧸💖"
+            "🧸 The teddy packed your bags already!",
+            "Think of the European road trips! 🚂😂",
+            "One Yes and a new chapter begins! 🌍💖"
         ];
 
         function runAway() {
